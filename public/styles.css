@@ -126,7 +126,6 @@ table tr td:nth-child(1) {
     width: 200px; /* Adjust width as needed */
    /* background-color: #F26A25;*/
 }
-
 .search-container {
     position: relative;
     display: inline-block;
