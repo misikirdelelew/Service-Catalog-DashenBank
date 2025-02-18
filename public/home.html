@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Service Catalog</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+</head>
+<body>
+    <header>
+    <div class="header-left">
+        <img src="images/dashen_bank_logo.png" alt="Dashen Bank Logo" class="logo">
+    </div>
+   <!-- <div class="header-right">
+        <input type="text" id="searchBox" placeholder="Search..." oninput="handleSearch()">
+        <div id="searchResults" class="search-results"></div>
+    </div>-->
+   <!-- <div class="header-right">
+        <a id="add-service-link" href="/add-service.html" class="add-service-link">Add Service</a>
+    </div>-->
+
+    <div class="header-right">
+        <a id="add-service-link" href="/add-service.html" class="btn btn-primary add-service-link">
+            + Add New Service
+        </a>
+    </div>
+    
+
+  <!--  <div class="header-right">
+        <a href="/login.html">Login</a>
+        <a href="/register.html">Register</a>
+        <input type="text" id="searchBox" placeholder="Search...">
+    </div>-->
+</header>
+    <h1>Service Catalog</h1>
+    <div id="deploymentLinks">
+        <a href="#" data-deployment="Production Primary">Production Primary</a>
+        <a href="#" data-deployment="Production Secondary">Production Secondary</a>
+        <a href="#" data-deployment="Test">UAT</a>
+        
+    </div>
+    <div class="search-container">
+        <input type="text" id="searchBox" placeholder="Search services...">
+        <i class="fas fa-search search-icon"></i>
+    </div>
+    
+    <table id="serviceTable">
+        <thead>
+            <tr>
+                <th>Service Name</th>
+                <th>Description</th>
+                <th>IP/ServiceName</th>
+                <th>Port</th>
+                <th>Context Root</th>
+                <th>SSL</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <script src="script.js"></script>
+</body>
+</html>

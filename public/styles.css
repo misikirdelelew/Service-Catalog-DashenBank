@@ -1,0 +1,277 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+}
+
+#add-service{
+    color: #ece8e5;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: medium;
+}
+
+header {
+    background-color: #004A94; /* Dashen Bank blue */
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between; /* Space between logo and search box */
+    align-items: center;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+/*
+.header-right {
+    display: flex;
+    align-items: center;
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 5px;
+   /* background-color: #F26A25; 
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px auto;
+    width: fit-content;
+}*/
+
+.header-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.add-service-link {
+    display: inline-block;
+    background-color:#F26A25; /* Professional blue */
+    color: #ffffff !important;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.add-service-link:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+}
+
+
+
+.logo {
+    max-height: 50px;
+    margin-right: 10px; /* Add margin to separate from the edge */
+}
+
+h1 {
+    text-align: center;
+    color: #947e00;
+}
+
+#deploymentLinks {
+    margin: 20px auto;
+    width: fit-content;
+}
+
+#deploymentLinks a {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 5px;
+    background-color: #F26A25; 
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#deploymentLinks a:hover {
+    background-color: #E05A15; 
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #004A94; /* Dashen Bank blue */
+    color: white;
+}
+
+table tr td:nth-child(1) {
+    cursor: pointer;
+}
+
+
+/* Search Box */
+#searchBox {
+    padding: 8px;
+    border: 1px solid #E05A15;
+    border-radius: 5px;
+    width: 200px; /* Adjust width as needed */
+   /* background-color: #F26A25;*/
+}
+
+.search-container {
+    position: relative;
+    display: inline-block;
+}
+
+#searchBox {
+    padding: 8px 30px 8px 8px; /* Adjust padding for icon */
+    border: 1px solid #E05A15;
+    border-radius: 5px;
+    width: 200px;
+}
+
+#searchBox:focus {
+    outline: none;
+    border-color: #004A94;
+    box-shadow: 0 0 5px rgba(0, 74, 148, 0.5);
+}
+
+.search-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #E05A15;
+    pointer-events: none; /* Prevent interaction */
+}
+
+
+.search-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #E05A15;
+    pointer-events: none; /* Prevent interaction */
+}
+
+/* Service Registration Form Styles */
+
+form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+form div {
+    margin-bottom: 15px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input,
+form textarea,
+form select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #004A94;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #003366;
+}
+
+.add-service-link {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: medium;
+    color: #E05A15;
+}
+
+
+
+/* Login Form Styles */
+form {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+form div {
+    margin-bottom: 15px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #004A94;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #003366;
+}
+
+p {
+    text-align: center;
+    margin-top: 20px;
+}
+
+a {
+    color: #004A94;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
