@@ -1,0 +1,87 @@
+<html>
+<head>
+    <title>iisnode logs</title>
+    <style type="text/css">
+        body
+        {
+            font-family: "Trebuchet MS" , Arial, Helvetica, sans-serif;
+        }
+        table
+        {
+            border-collapse: collapse;
+        }
+        td, th
+        {
+            border: 1px solid lightgray;
+            padding: 3px 7px 2px 7px;
+        }
+        th
+        {
+            text-align: left;
+            padding-top: 5px;
+            padding-bottom: 4px;
+            background-color: Gray;
+            color: #ffffff;
+        }
+        td.stderr
+        {
+            color: Red;
+        }
+    </style>
+</head>
+<body>
+    <table id="logFilesTable">
+        <tr>
+            <th>
+                Computer name
+            </th>
+            <th>
+                PID
+            </th>
+            <th>
+                Type
+            </th>
+            <th>
+                Created
+            </th>
+            <th>
+                Link
+            </th>
+        </tr>
+    </table>
+    <p id="lastUpdated"></p>
+    <script type="text/javascript">
+
+        // this is replaced with actual data at runtime by code in interceptor.js
+        var logFiles = [{"file":"DESKTOP-BQ4DIQ8-10056-stderr-1739606634378.txt","computername":"DESKTOP-BQ4DIQ8","pid":10056,"type":"stderr","created":1739606634378},{"file":"DESKTOP-BQ4DIQ8-10120-stderr-1739608328124.txt","computername":"DESKTOP-BQ4DIQ8","pid":10120,"type":"stderr","created":1739608328124},{"file":"DESKTOP-BQ4DIQ8-10212-stderr-1739608307184.txt","computername":"DESKTOP-BQ4DIQ8","pid":10212,"type":"stderr","created":1739608307184},{"file":"DESKTOP-BQ4DIQ8-10460-stderr-1739608335955.txt","computername":"DESKTOP-BQ4DIQ8","pid":10460,"type":"stderr","created":1739608335955},{"file":"DESKTOP-BQ4DIQ8-12924-stderr-1739606632060.txt","computername":"DESKTOP-BQ4DIQ8","pid":12924,"type":"stderr","created":1739606632060},{"file":"DESKTOP-BQ4DIQ8-13608-stderr-1739606634682.txt","computername":"DESKTOP-BQ4DIQ8","pid":13608,"type":"stderr","created":1739606634682},{"file":"DESKTOP-BQ4DIQ8-13752-stderr-1739606631594.txt","computername":"DESKTOP-BQ4DIQ8","pid":13752,"type":"stderr","created":1739606631594},{"file":"DESKTOP-BQ4DIQ8-13788-stderr-1739606633081.txt","computername":"DESKTOP-BQ4DIQ8","pid":13788,"type":"stderr","created":1739606633081},{"file":"DESKTOP-BQ4DIQ8-14300-stderr-1739606632760.txt","computername":"DESKTOP-BQ4DIQ8","pid":14300,"type":"stderr","created":1739606632760},{"file":"DESKTOP-BQ4DIQ8-14880-stderr-1739608306929.txt","computername":"DESKTOP-BQ4DIQ8","pid":14880,"type":"stderr","created":1739608306929},{"file":"DESKTOP-BQ4DIQ8-15444-stderr-1739770672679.txt","computername":"DESKTOP-BQ4DIQ8","pid":15444,"type":"stderr","created":1739770672679},{"file":"DESKTOP-BQ4DIQ8-17912-stderr-1739769575870.txt","computername":"DESKTOP-BQ4DIQ8","pid":17912,"type":"stderr","created":1739769575870},{"file":"DESKTOP-BQ4DIQ8-3376-stderr-1739606634009.txt","computername":"DESKTOP-BQ4DIQ8","pid":3376,"type":"stderr","created":1739606634009},{"file":"DESKTOP-BQ4DIQ8-3664-stderr-1739769574899.txt","computername":"DESKTOP-BQ4DIQ8","pid":3664,"type":"stderr","created":1739769574899},{"file":"DESKTOP-BQ4DIQ8-4152-stderr-1739606633729.txt","computername":"DESKTOP-BQ4DIQ8","pid":4152,"type":"stderr","created":1739606633729},{"file":"DESKTOP-BQ4DIQ8-5084-stderr-1739608277836.txt","computername":"DESKTOP-BQ4DIQ8","pid":5084,"type":"stderr","created":1739608277836},{"file":"DESKTOP-BQ4DIQ8-5428-stderr-1739769577947.txt","computername":"DESKTOP-BQ4DIQ8","pid":5428,"type":"stderr","created":1739769577947},{"file":"DESKTOP-BQ4DIQ8-6652-stderr-1739608277564.txt","computername":"DESKTOP-BQ4DIQ8","pid":6652,"type":"stderr","created":1739608277564},{"file":"DESKTOP-BQ4DIQ8-6684-stderr-1739608330241.txt","computername":"DESKTOP-BQ4DIQ8","pid":6684,"type":"stderr","created":1739608330241},{"file":"DESKTOP-BQ4DIQ8-8492-stderr-1739770701429.txt","computername":"DESKTOP-BQ4DIQ8","pid":8492,"type":"stderr","created":1739770701429},{"file":"DESKTOP-BQ4DIQ8-8952-stderr-1739606635082.txt","computername":"DESKTOP-BQ4DIQ8","pid":8952,"type":"stderr","created":1739606635082}];
+        var lastUpdated = 1739770701432;
+        var date = new Date();
+
+        date.setTime(lastUpdated);
+        document.getElementById('lastUpdated').innerHTML = 'Index was last updated ' + date;
+
+        logFiles.sort(function (a, b) {
+            return b.created - a.created;
+        });
+
+        var logFilesTable = document.getElementById("logFilesTable");
+        for (var i = 0; i < logFiles.length; i++) {
+            var logFile = logFiles[i];
+            date.setTime(logFile.created);
+            var row = logFilesTable.insertRow(-1);
+            var computerNameCell = row.insertCell(0);
+            var pidCell = row.insertCell(1);
+            var typeCell = row.insertCell(2);
+            var dateCell = row.insertCell(3);
+            var logCell = row.insertCell(4);
+            computerNameCell.innerHTML = logFile.computername;
+            pidCell.innerHTML = logFile.pid.toString();
+            typeCell.innerHTML = logFile.type;
+            typeCell.setAttribute('class', logFile.type);
+            dateCell.innerHTML = date.toString();
+            logCell.innerHTML = '<a href="' + logFile.file + '">log</a>';
+        };
+
+    </script>
+</body>
+</html>
