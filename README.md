@@ -16,10 +16,10 @@ The service catalog aims to streamline the process of service discovery and requ
 
 This project utilizes the following technologies:
 
-* **Frontend:**  [List frontend technologies used, e.g., React, Angular, Vue.js, HTML, CSS, JavaScript]
-* **Backend:**  [List backend technologies used, e.g., Java, Python, Node.js, Spring Boot, Django, Express.js]
-* **Database:**  [List database used, e.g., PostgreSQL, MySQL, MongoDB]
-* **Other:**  [List any other relevant technologies, e.g., Docker, Kubernetes, AWS, Azure]
+* **Frontend:**  [List frontend technologies used, HTML, CSS, JavaScript]
+* **Backend:**  [List backend technologies used  Node.js,Express.js]
+* **Database:**  [List database used, e.g., PostgreSQL]
+* **Other:**  [List any other relevant technologies]
 
 ## Getting Started
 
